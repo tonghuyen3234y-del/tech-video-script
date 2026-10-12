@@ -1,40 +1,30 @@
 # 爆款科技口播文案
 
-一个面向 Codex 的中文科技短视频口播技能：先核实新闻，再输出5个标题、约200字的一段式口播，以及新闻来源链接。
-
-## 使用
-
-安装后输入：
-
-> 用爆款科技口播文案，写这个选题：【你的科技新闻选题】
-
-也可用内部技能名 `$tech-video-script` 调用，并补充语气或长度要求。
+核实科技新闻，生成5个标题、180—230字的一段式口播与来源链接。
 
 ## 安装
 
-下载本仓库，将 `tech-video-script` 文件夹复制到 `~/.codex/skills/`。文件结构应为 `~/.codex/skills/tech-video-script/SKILL.md`，之后在支持个人技能的 Codex 会话中调用。
+下载仓库内的 [完整技能包](tech-video-script.zip)，解压后将 tech-video-script-open-source/tech-video-script 文件夹复制到 ~/.codex/skills/。完整包包含风格指南及中文显示名称配置。根目录 SKILL.md 是合并风格指南的独立版本，也可放入 ~/.codex/skills/tech-video-script/ 使用。
 
-## 能力
+## 使用
 
-- 5个不同角度的标题，推荐1个。
-- 默认180—230字口播，整理成一个自然段。
-- 优先官方来源，核对媒体报道，提供新闻日期与直接链接。
-- 支持结果递进、冲突反转、科技应用、画面吐槽四类结构。
-- 无法证实的选题不写成事实；高点击率是创作目标，不承诺流量。
+> 用爆款科技口播文案，写这个选题：【你的科技新闻选题】
 
-需要运行环境具备联网检索及网页阅读能力。本项目是技能指令，不是独立运行的AI服务；GitHub Pages仅展示介绍与安装说明。
+支持结果递进、冲突反转、科技应用、画面吐槽。需要 Codex 具有联网检索能力。无法证实的消息不写成事实，高点击率是创作目标，不承诺流量。
 
-## 项目结构
+## 网页
 
-- `tech-video-script/SKILL.md`：核心工作流
-- `tech-video-script/references/style-guide.md`：口播风格指南
-- `tech-video-script/agents/openai.yaml`：显示名称与默认提示
-- `docs/index.html`：GitHub Pages展示页
+[访问介绍网页](https://tonghuyen3234y-del.github.io/tech-video-script/)
 
-## 部署到 GitHub Pages
+GitHub Pages采用 main 分支根目录发布 index.html。网页展示技能介绍；实际生成文案需在 Codex 中安装技能。
 
-在仓库 Settings → Pages 中将 Source 设为 GitHub Actions。推送到 `main` 后，Pages工作流会发布 `docs/` 目录。也可手动运行工作流。
+## 文件
 
-## 开源许可
+- SKILL.md：独立技能源码，包含完整风格指南
+- tech-video-script.zip：完整技能安装包及原始部署文件
+- index.html：展示页
+- LICENSE：MIT许可证
 
-MIT。仓库包含提炼后的写作指南，不包含用户原始参考文案或本地路径。
+## 许可
+
+MIT。仅公开提炼后的写作指南，不包含用户原始参考文案与本地路径。
